@@ -1,0 +1,70 @@
+# ── 依赖 ────────────────────────────────────────────────────────────────
+# 本插件没有运行时依赖（纯 ESM，magpie 用 moejs 加载，不需要 npm install）。
+# 但用户本地可能跑过 bun install / npm install，别把它们提交上去。
+node_modules/
+.pnp.*
+.yarn/
+bun.lockb
+bun.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ── 构建产物 ────────────────────────────────────────────────────────────
+# 插件是源码直跑的（magpie 的 agent 插件走 moejs，不打包），
+# 所以没有 dist/。留着这条是给将来万一要打包时防手滑。
+dist/
+build/
+*.tsbuildinfo
+
+# ── 测试与覆盖率 ────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+*.lcov
+
+# ── 日志与临时文件 ──────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+bun-debug.log*
+logs/
+tmp/
+*.tmp
+
+# magpie 自己的调试产物：插件宿主把 console.log 转进 magpie 的日志，
+# 本地开发时可能顺手 dump 出来。
+magpie-host*.log
+plugin-*.json
+
+# ── 编辑器与 IDE ────────────────────────────────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# ── 操作系统 ────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── 凭据（绝不能提交）──────────────────────────────────────────────────
+# 插件的 connect() 会写网关地址和 key 到 ~/.dsh/magpie-agent.yml，
+# 那是用户机器上的文件，不在本仓库里。但如果有人把样例配置贴进仓库，
+# 下面这些能挡住真实的 key。
+*.pem
+*.key
+*.p12
+*.jks
+.env
+.env.*
+!.env.example
+secrets.json
+credentials.json

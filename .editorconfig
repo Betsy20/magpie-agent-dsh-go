@@ -1,0 +1,17 @@
+# 插件是纯 ESM，magpie 用 moejs 加载。
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.md]
+# Markdown 里行尾两个空格是硬换行，别被编辑器吃掉
+trim_trailing_whitespace = false
+
+[*.{json,jsonc}]
+indent_size = 2

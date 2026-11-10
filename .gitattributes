@@ -1,0 +1,11 @@
+# 全部按 LF 存：插件在 macOS / Linux / Android 上跑，Windows 上也只是编辑器打开，
+# 不靠 CRLF。
+* text=auto eol=lf
+
+# 二进制（万一有人放图标进来）
+*.png binary
+*.jpg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.zip binary

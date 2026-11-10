@@ -1,0 +1,18 @@
+{
+  "name": "magpie-agent-dsh-go",
+  "version": "0.1.0",
+  "description": "DSH Go (DeepSeek Harness for Android) in magpie's Agent page",
+  "type": "module",
+  "files": ["agent.js", "README.md"],
+  "keywords": ["magpie", "magpie-plugin", "agent", "dsh", "deepseek-harness"],
+  "license": "MIT",
+  "magpie": {
+    "agent": "./agent.js",
+    "name": "DSH Go",
+    "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiIGZpbGw9IiM0QjY3QjQiLz48cGF0aCBkPSJNNyAxMGgydjZoLTJ6bTQgMGgydjZoLTJ6bTQgMGgydjZoLTJ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+",
+    "summary": {
+      "en": "DeepSeek Harness for Android in magpie's Agent page.",
+      "zh": "把 DSH Go（DeepSeek Harness 的 Android 客户端）加到 magpie 的 Agent 页。"
+    }
+  }
+}
